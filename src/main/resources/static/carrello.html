@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Carrello - TechShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="home.html"><strong>TechShop</strong></a>
+        <span>Benvenuto, Giuseppe</span>
+
+        <form action="home.html">
+            <input type="search" name="q" placeholder="Cerca prodotti..." required>
+            <button type="submit">Cerca</button>
+        </form>
+
+        <details>
+            <summary>Account</summary>
+            <a href="login.html">Esci</a>
+        </details>
+
+        <a href="carrello.html">Carrello</a>
+    </nav>
+</header>
+
+<main class="cart-layout">
+    <section>
+        <h1>Il tuo carrello</h1>
+
+        <article class="cart-item">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300" alt="Notebook Pro">
+            <div>
+                <h3>Notebook Pro</h3>
+                <p>Computer portatile per studio e lavoro.</p>
+                <p>Prezzo unitario: € 899,00</p>
+                <label>Quantità
+                    <input type="number" min="1" value="1"
+                           data-prezzo="899" class="quantita">
+                </label>
+            </div>
+        </article>
+
+        <article class="cart-item">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" alt="Cuffie Wireless">
+            <div>
+                <h3>Cuffie Wireless</h3>
+                <p>Cuffie senza fili con audio di qualità.</p>
+                <p>Prezzo unitario: € 129,00</p>
+                <label>Quantità
+                    <input type="number" min="1" value="1"
+                           data-prezzo="129" class="quantita">
+                </label>
+            </div>
+        </article>
+    </section>
+
+    <aside class="summary">
+        <h2>Riepilogo ordine</h2>
+        <p>Totale provvisorio:</p>
+        <h3 id="totale">€ 1.028,00</h3>
+        <a href="checkout.html"><button>Procedi al checkout</button></a>
+        <p><a href="home.html">Continua gli acquisti</a></p>
+    </aside>
+</main>
+
+<footer>
+    <p>© 2026 TechShop - Prezzi a scopo dimostrativo.</p>
+    <p>Le immagini sono illustrative.</p>
+</footer>
+</body>
+</html>

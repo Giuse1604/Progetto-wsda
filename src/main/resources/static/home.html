@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - TechShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="home.html"><strong>TechShop</strong></a>
+        <span>Benvenuto, Giuseppe</span>
+
+        <form action="home.html">
+            <input type="search" name="q" placeholder="Cerca prodotti..." required>
+            <button type="submit">Cerca</button>
+        </form>
+
+        <details>
+            <summary>Account</summary>
+            <a href="login.html">Esci</a>
+            <br>
+            <a href="registrazione.html">Registrazione</a>
+        </details>
+
+        <a href="carrello.html">Carrello</a>
+    </nav>
+</header>
+
+<main class="layout">
+    <aside class="sidebar">
+        <h3>Categorie</h3>
+        <a href="#p1">Computer</a>
+        <a href="#p2">Smartphone</a>
+        <a href="#p3">Audio</a>
+        <a href="#p4">Accessori</a>
+    </aside>
+
+    <section>
+        <h1>I nostri prodotti</h1>
+
+        <div class="products">
+            <article class="card" id="p1">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600" alt="Computer portatile">
+                <h3>Notebook Pro</h3>
+                <p>Computer portatile potente per studio e lavoro.</p>
+                <p class="price">€ 899,00</p>
+                <p class="stars">★★★★★</p>
+                <div class="actions">
+                    <button onclick="aggiungi('Notebook Pro')">Aggiungi al carrello</button>
+                    <button onclick="dettagli('Notebook Pro', 'Computer portatile potente per studio e lavoro.', '899,00', this)">Maggiori informazioni</button>
+                </div>
+            </article>
+
+            <article class="card" id="p2">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600" alt="Smartphone">
+                <h3>Smartphone X</h3>
+                <p>Smartphone con schermo ad alta definizione.</p>
+                <p class="price">€ 499,00</p>
+                <p class="stars">★★★★☆</p>
+                <div class="actions">
+                    <button onclick="aggiungi('Smartphone X')">Aggiungi al carrello</button>
+                    <button onclick="dettagli('Smartphone X', 'Smartphone moderno con schermo ad alta definizione e fotocamera avanzata.', '499,00', this)">Maggiori informazioni</button>
+                </div>
+            </article>
+
+            <article class="card" id="p3">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="Cuffie">
+                <h3>Cuffie Wireless</h3>
+                <p>Audio di qualità e connessione senza fili.</p>
+                <p class="price">€ 129,00</p>
+                <p class="stars">★★★★★</p>
+                <div class="actions">
+                    <button onclick="aggiungi('Cuffie Wireless')">Aggiungi al carrello</button>
+                    <button onclick="dettagli('Cuffie Wireless', 'Cuffie wireless confortevoli con audio di qualità e batteria a lunga durata.', '129,00', this)">Maggiori informazioni</button>
+                </div>
+            </article>
+
+            <article class="card" id="p4">
+                <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=600" alt="Mouse">
+                <h3>Mouse Gaming</h3>
+                <p>Mouse preciso ed ergonomico per il gaming.</p>
+                <p class="price">€ 59,00</p>
+                <p class="stars">★★★★☆</p>
+                <div class="actions">
+                    <button onclick="aggiungi('Mouse Gaming')">Aggiungi al carrello</button>
+                    <button onclick="dettagli('Mouse Gaming', 'Mouse ergonomico con sensore preciso, ideale per gaming e uso quotidiano.', '59,00', this)">Maggiori informazioni</button>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<dialog id="modale">
+    <h2 id="titolo"></h2>
+    <img id="immagine" src="" alt="">
+    <p id="descrizione"></p>
+    <p id="prezzo"></p>
+    <button onclick="document.getElementById('modale').close()">Chiudi</button>
+</dialog>
+
+<dialog id="conferma">
+    <h2>Prodotto aggiunto</h2>
+    <p id="messaggio"></p>
+    <a href="carrello.html">Vai al carrello</a>
+    <button onclick="document.getElementById('conferma').close()">Continua gli acquisti</button>
+</dialog>
+
+<footer>
+    <p>TechShop - Il tuo negozio di tecnologia</p>
+    <p>© 2026 TechShop. Tutti i diritti riservati.</p>
+    <p>Immagini illustrative. Prezzi e disponibilità a scopo dimostrativo.</p>
+</footer>
+</body>
+</html>

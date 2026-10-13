@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkout - TechShop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <a href="home.html"><strong>TechShop</strong></a>
+        <span>Benvenuto, Giuseppe</span>
+
+        <form action="home.html">
+            <input type="search" name="q" placeholder="Cerca prodotti..." required>
+            <button type="submit">Cerca</button>
+        </form>
+
+        <details>
+            <summary>Account</summary>
+            <a href="login.html">Esci</a>
+        </details>
+
+        <a href="carrello.html">Carrello</a>
+    </nav>
+</header>
+
+<main>
+    <section class="panel">
+        <h1>Checkout</h1>
+
+        <form action="conferma.html">
+            <h3>Indirizzo di spedizione</h3>
+
+            <div class="fields">
+                <label>Nome e cognome
+                    <input type="text" name="nome" required>
+                </label>
+
+                <label>Indirizzo
+                    <input type="text" name="indirizzo" required>
+                </label>
+
+                <label>Città
+                    <input type="text" name="citta" required>
+                </label>
+
+                <label>CAP
+                    <input type="text" name="cap" pattern="[0-9]{5}"
+                           title="Inserisci un CAP di 5 cifre" required>
+                </label>
+            </div>
+
+            <h3>Metodo di pagamento</h3>
+
+            <label>Seleziona il pagamento
+                <select name="pagamento" required>
+                    <option value="">Scegli...</option>
+                    <option value="carta">Carta di credito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="contrassegno">Contrassegno</option>
+                </select>
+            </label>
+
+            <p><strong>Pagamento simulato: nessun addebito reale.</strong></p>
+            <button type="submit">Conferma checkout</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 TechShop - Acquisto dimostrativo.</p>
+    <p>Nessun pagamento reale viene effettuato.</p>
+</footer>
+</body>
+</html>
